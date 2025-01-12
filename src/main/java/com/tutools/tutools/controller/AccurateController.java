@@ -35,6 +35,7 @@ public class AccurateController {
             System.out.println("kong...................");
             return "上传失败，请选择文件";
         }
+        
 
         String fileName = file.getOriginalFilename();
         String path = ClassUtils.getDefaultClassLoader().getResource("").getPath();
@@ -44,7 +45,7 @@ public class AccurateController {
         System.out.println(dest.getAbsolutePath());
         try {
             file.transferTo(dest);
-            LOGGER.info("上传成功");
+            LOGGER.info("上传成功, niukor@qq.com");
             return "上传成功";
         } catch (IOException e) {
             LOGGER.error(e.toString(), e);
